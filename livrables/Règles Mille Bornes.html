@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Règles du Mille Bornes</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      margin-bottom: 8rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      font-weight: 500;
+    }
+
+    h1 {
+      margin-block: 2rem;
+    }
+
+    h2 {
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+
+    ol,
+    ul {
+      margin-left: 2rem;
+    }
+
+    ol li,
+    ul li {
+      margin-block: 0.4rem;
+      padding-left: 0.5rem;
+    }
+
+    ul li::marker {
+      color: rgb(0 128 130);
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    .container {
+      width: min(95%, 80ch);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      color: hsl(0, 73%, 43%);
+    }
+
+    .emphase {
+      color: rgb(0 128 130);
+      text-align: center;
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    *:not(h2)+.emphase {
+      margin-top: 1rem;
+    }
+
+    .card-heading {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
+    }
+
+    .text-important {
+      font-weight: 500;
+      color: hsl(0, 73%, 43%);
+    }
+
+    .text-notes {
+      color: rgb(0 128 130);
+      font-weight: 400;
+    }
+
+    .ms-2 {
+      margin-left: 1.5rem;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.15rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Règles du Mille Bornes</h1>
+    </header>
+    <main>
+      <Section>
+        <h2 class="section-heading">But du Jeu</h2>
+        <p>Après avoir joué un <span class="carte parade feu-vert">Feu Vert</span>, le gagnant est celui qui a exposé
+          exactement 1000 Bornes avec ses cartes-étapes, qui aura su contrer les attaques de ses adversaires grâce aux
+          parades, voire jouer des Bottes pour faire des "Coup-Fourrés".</p>
+      </Section>
+
+      <section>
+        <h2 class="section-heading">Démarrons&hellip;</h2>
+        <p class="emphase">Le Mille Bornes se joue avec 2 à 6 joueurs.</p>
+        <p>On distribue 6 cartes par joueur. On place le reste des cartes faces cachées au milieu des joueurs, pour
+          former la pioche. Chaque joueur regarde ses propres cartes sans les montrer aux autres joueurs.</p>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Jouons&nbsp;!</h2>
+        <p class="emphase">Le Mille Bornes se joue chacun pour soi. Chaque joueur expose son jeu devant lui au fur et à
+          mesure.
+        </p>
+        <p>Le 1<sup>er</sup> joueur pioche la carte du dessus et l'ajoute aux 6 cartes qu'il a déjà en main. Il se
+          trouve donc momentanément en possession de 7 cartes.</p>
+
+        <div class="details">
+          <h3>Il a alors 4 possibilités&nbsp;:</h3>
+          <ol>
+            <li>S'il a un <span class="carte parade feu-vert">Feu Vert</span> (Roulez), il peut démarrer sa
+              course&nbsp;! Il pose alors la carte devant lui et commence ainsi sa course.</li>
+            <li>S'il a une Botte, il peut la poser devant lui. (Le fait de poser une Botte lui donne le droit de
+              rejouer. Il tire donc une autre carte dans la pioche et a ces 4 possibilités à nouveau).</li>
+            <li>S'il a une <span class="carte attaque limite-vitesse">Limite de Vitesse</span>, il peut la placer devant
+              un adversaire, même si celui-ci n'a pas encore commencé à jouer&nbsp;!</li>
+            <li>S'il n'a aucune de ces cartes (<span class="carte parade feu-vert">Feu Vert</span>, <span
+                class="carte attaque limite-vitesse">Limite de Vitesse</span> ou Botte), il doit jeter l'une de ses
+              cartes dans la défausse en attendant de piocher une bonne carte.</li>
+          </ol>
+        </div>
+        <p class="emphase">Puis c'est au joueur suivant&nbsp;: aux différentes façons de jouer indiquées précédemment
+          s'ajoutent pour lui deux autres possibilités&nbsp;:</p>
+        <div class="details">
+          <ol>
+            <li>Si le 1<sup>er</sup> joueur a posé un <span class="carte parade feu-vert">Feu Vert</span>, il peut
+              l'attaquer par une carte <span class="carte attaque limite-vitesse">Limite de Vitesse</span> ou par
+              n'importe quelle autre carte Attaque.</li>
+            <li>Si le 1<sup>er</sup> joueur l'a attaqué d'une <span class="carte attaque limite-vitesse">Limite de
+                Vitesse</span>, il peut recouvrir cette carte d'une <span class="carte parade fin-limite-vitesse">Fin de
+                Limite de Vitesse</span> qui l'annulera. Ce deuxième joueur devra tout de même poser un <span
+                class="carte parade feu-vert">Feu Vert</span> pour démarrer dans un prochain tour.</li>
+          </ol>
+        </div>
+        <p>Le jeu continue, chacun jouant à son tour en tirant la carte au-dessus de la pioche, jusqu'à ce qu'un joueur
+          ait aligné exactement 1000 Bornes devant lui. La manche est alors terminée.</p>
+        <p>Si personne n'a atteint ce nombre exact, la manche se termine quand tous les joueurs ne peuvent plus jouer.
+          Le gagnant est celui qui a fait le plus de kilomètres (&hellip;ou de bornes&nbsp;!).</p>
+        <p><span class="text-important">Remarque&nbsp;:</span> après avoir joué chaque joueur doit toujours se retrouver
+          avec
+          6 cartes en main.</p>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Comment disposer les cartes devant soi</h2>
+        <p>La zone de jeu d'un joueur est constituée de 4 piles de cartes&nbsp;:</p>
+        <div class="details">
+          <ul>
+            <li>Pile de Vitesse&nbsp;: sur laquelle on peut poser les cartes <span
+                class="carte attaque limite-vitesse">Limite de Vitesse</span> et <span
+                class="carte parade fin-limite-vitesse">Fin de Limite de Vitesse</span></li>
+            <li>Pile Bataille&nbsp;: sur laquelle on pose les autres cartes Attaques et Parades</li>
+            <li>Pile Bottes&nbsp;: où l'on pose les cartes Bottes</li>
+            <li>Pile &Eacute;tapes&nbsp;: où l'on pose les cartes &Eacute;tapes</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Compter les Points</h2>
+        <p class="emphase">Une variante du jeu permet de jouer en comptant les points. Dans ce cas, le but du jeu est
+          d'atteindre les 5000 points.</p>
+        <div class="details">
+          <h3>Voici comment compter les points&nbsp;:</h3>
+          <ul>
+            <li>Chacun marque autant de points que de kilomètres posés. (Par exemple, si vous n'avez pas gagné la
+              manche, le 1<sup>er</sup> marque 1000 points car il a atteint 1000&nbsp;Km et vous qui en étiez à 475,
+              vous marquez 475 points).</li>
+            <li>Chaque Bottes posée rapporte 100 points (attention, s'il reste des Bottes dans votre main, cela ne vous
+              rapporte rien).</li>
+            <li>Chaque Coup-Fourré rapporte 300 points en plus de la Botte (soit 400 points en tout).</li>
+            <li>Le vainqueur marque 400 points par manches gagnées.</li>
+            <li>Si vous avez gagné sans carte-étape 200, vous obtenez un bonus de 200 points.</li>
+            <li>Si un ou plusieurs joueurs n'ont posés aucune carte-étape, tous les autres joueurs marquent 500 points.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Explication de chaque carte</h2>
+        <h3 class="card-heading">1&nbsp;&ndash;&nbsp;&Eacute;tapes</h3>
+        <div class="details">
+          <p>Chaque carte-étape représente une distance&nbsp;: 25, 50, 75, 100 ou 200 Km. Une fois posées, ces cartes
+            permettent d'atteindre 1000 Bornes en s'additionnant les unes aux autres. Pour poser des étapes, il faut
+            avoir un <span class="carte parade feu-vert">Feu Vert</span> pour démarrer la course, n'avoir aucune attaque
+            sur la pile de Bataille, ou bien posséder la Botte Prioritaire. N'importe quelle carte-étape peut être jouée
+            tant que vous n'êtes pas attaqué par une carte Limite de Vitesse.</p>
+          <h3>Notes&nbsp;:</h3>
+          <ol>
+            <li>Attention vous ne pouvez pas déposer plus de 2 fois une carte 200.</li>
+            <li>Si vous êtes attaqué par un adversaire avec une carte Limite de Vitesse, vous ne pourrez pas poser de
+              cartes étapes 75, 100 et 200 avant d'avoir trouvé la parade Fin de Limite de Vitesse.</li>
+            <li>Pour atteindre 1000 Bornes, il faut poser exactement la somme de 1000. Par exemple, quand on atteint 950
+              bornes, les étapes 75, 100 et 200 deviennent inutiles.</li>
+          </ol>
+        </div>
+
+        <h3 class="card-heading">2&nbsp;&ndash;&nbsp;Attaques et Parades</h3>
+        <p class="emphase">Pour attaquer votre adversaire, vous devez placer votre carte d'attaque sur la pile
+          Bataille. Il ne peut pas repartir sans avoir recouvert l'attaque par une parade puis par un Feu Vert.
+          (Exemple&nbsp;: poser une carte Essence puis une carte Feu Vert sur une attaque Panne d'Essence permet de
+          repartir). La carte Limite de Vitesse peut se cumuler avec chacune des 4 autres attaques.</p>
+        <div class="details">
+          <p><span class="text-important">Limite de Vitesse&nbsp;: </span>cette carte se place sur la pile de Vitesse
+            d'un adversaire. Cela l'empêche de poser de nouvelles étapes supérieures à 50 Km tant qu'il n'aura pas
+            recouvert cette attaque d'une Fin de Limite de Vitesse.</p>
+
+          <p><span class="text-important">Feu Rouge (Stop)&nbsp;: </span>cette carte se place sur la pile de Bataille
+            d'un adversaire qui roule. Cela l'empêche de poser de nouvelles étapes tant qu'il n'aura pas recouvert cette
+            attaque d'une carte Feu Vert.</p>
+
+          <p><span class="text-important">Panne d'Essence&nbsp;: </span>cette carte se place sur la pile de Bataille
+            d'un adversaire qui roule. Cela l'empêche de poser de nouvelles étapes tant qu'il n'aura pas recouvert la
+            carte Panne d'Essence d'une carte Essence puis d'une carte Essence puis d'une carte Feu Vert.</p>
+
+          <p><span class="text-important">Crevé&nbsp;: </span>cette carte se place sur la pile de Bataille d'un
+            adversaire qui roule. Cela l'empêche de poser de nouvelles étapes tant qu'il n'aura pas recouvert la carte
+            Crevé d'une carte Roue de Secours puis d'un carte Feu Vert.</p>
+
+          <p><span class="text-important">Accident&nbsp;: </span>cette carte se place sur la pile de Bataille d'un
+            adversaire qui roule. Cela l'empêche de poser de nouvelles étapes tant qu'il n'aura pas recouvert la carte
+            Accident d'une carte Réparations puis d'une carte Feu Vert.</p>
+        </div>
+
+        <h3 class="card-heading">3&nbsp;&ndash;&nbsp;Bottes</h3>
+        <p class="emphase">Ces cartes sont très importantes et très puissantes. Lorsqu'un joueur a posé une Botte, il
+          devient invincible sur certaines attaques&hellip;</p>
+
+        <p>Une Botte peut être exposée à deux moments&nbsp;:</p>
+        <ul>
+          <li>Soit à votre tour (même si c'est votre toute première carte);</li>
+          <li>Soit au moment précis où un adversaire vous attaque et si votre Botte correspond à l'attaque&nbsp;: c'est
+            le Coup-Fourré.</li>
+        </ul>
+        <div class="details">
+          <p class="mb-1"><span class="text-important">Prioritaire&nbsp;: </span>quand elle est posée, les adversaires
+            ne peuvent plus attaquer avec une carte Feu Rouge ni avec une carte Limite de Vitesse. La Botte Prioritaire
+            posée dispense de Feu Vert par la suite. Grâce à cette Botte, le joueur concerné peut aligner des étapes
+            tant qu'il n'est pas attaqué par une attaque Panne d'Essence, Crevé ou Accident.</p>
+
+          <p class="ms-2"><span class="text-notes">Remarque&nbsp;: </span>si vous avez posé la Botte Prioritaire, les
+            autres joueurs posent leur attaque sur votre dernière parade car vous n'avez plus besoin de Feu Vert pour
+            repartir après chaque attaque.</p>
+
+          <p><span class="text-important">Citerne&nbsp;: </span>quand elle est posée, les adversaires ne peuvent plus
+            attaquer avec une carte Panne d'Essence.</p>
+
+          <p><span class="text-important">Increvable&nbsp;: </span>quand elle est posée, les adversaires ne peuvent plus
+            attaquer avec une carte Crevé.</p>
+
+          <p><span class="text-important">As du Volant&nbsp;: </span>quand elle est posée, les adversaires ne peuvent
+            plus attaquer avec une carte Accident.</p>
+
+          <p><span class="text-notes">Notes&nbsp;: </span>Une Botte peut être exposée soit pendant son tour pour se
+            défendre, soit en Coup-Fourré lors d'une attaque. Dans l'un et l'autre cas, il faut rejouer ensuite.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Le Coup-Fourré</h2>
+        <div class="details">
+          <p>On fait un Coup-Fourré quand un adversaire place sur votre pile de Bataille l'attaque correspondante, même
+            si ça n'est pas votre tour.</p>
+          <p><strong>Exemple&nbsp;: </strong>un adversaire vous attaque avec une carte Crevé alors que vous avez
+            justement la Botte Increvable dans la main&hellip; Il faut crier immédiatement
+            <strong>"Coup-Fourré&nbsp;!"</strong> en posant la carte devant soi.
+          </p>
+        </div>
+
+        <p class="emphase">Le Coup-Fourré donne 4 avantages. Il permet&nbsp;:</p>
+        <ol>
+          <li>De rejeter à la défausse l'attaque qui est de toute façon annulée.</li>
+          <li>D'obtenir une nouvelle carte prise dans la pioche pour avoir de nouveau 6 cartes en main.</li>
+          <li>De rejouer immédiatement, c'est-à-dire de prendre <strong>encore</strong> une carte dans la pioche et de
+            jouer comme si c'était votre tour. C'est ensuite au tour du joueur à gauche, et ainsi de suite ; si des
+            joueurs se trouvent placés entre vous et celui qui a attaqué, ils perdent leur tour.</li>
+          <li>De marquer 300 points (en plus des 100 points de Bottes).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Règles complémentaires</h2>
+        <div class="details">
+          <p><span class="text-important">Mécanisme de jeu&nbsp;: </span>Le jeu comprend un type de carte supplémentaire
+            les cartes Météo. Les cartes Météo sont mises en début de partie dans une seconde pioche. Il y a les cartes
+            Neige, Beau Temps, et Vent dans le Dos. Une fois seulement dans la partie si un joueur a parcouru 500 Km ou
+            plus il pioche une carte de la pioche Météo en plus de sa pioche normale, et la dispose dans une nouvelle
+            pile appelée la pile Météo. La prochaine (et seulement la prochaine) carte-étape qui sera jouée aura sa
+            valeur modifier en fonction de la Météo&nbsp;:</p>
+
+          <p><span class="text-notes">Neige&nbsp;: </span>l'étape se voit attribuée un malus de 25 Km.</p>
+          <p><span class="text-notes">Beau Temps&nbsp;: </span>l'étape n'est pas modifiée.</p>
+          <p><span class="text-notes">Vent dans le Dos&nbsp;: </span>l'étape se voit attribuée d'un bonus de 25 Km</p>
+
+          <p>Les modifications ont lieu après avoir posé la carte. Elles ne permettent pas à un joueur de jouer une
+            carte 75 alors qu'il est sous la Neige et attaqué par une Limite de Vitesse.</p>
+
+          <p><span class="text-important">Modification du jeu&nbsp;: </span>Au lancement du jeu, un fichier
+            <code>config.txt</code> est créé (s'il n'existe pas déjà) dans le répertoire courant. Ce fichier permet de
+            modifier les quantités des cartes qui seront présentes dans le jeu. Le fichier est seulement lu au lancement
+            du jeu, par conséquent si des modifications lui sont apportés pendant que le programme est lancé elles ne
+            seront pas prises en compte avant de relancer le programme. Ce fichier contient les instructions pour
+            pouvoir le modifier.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
